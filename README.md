@@ -130,11 +130,3 @@ npm start
 
 This project is licensed under the MIT License.
 
-```
-
----
-
-If you want, I can also **add screenshots of the app and demo video thumbnail** so your README looks more professional on GitHub.  
-
-Do you want me to do that?
-```
