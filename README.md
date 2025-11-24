@@ -1,151 +1,143 @@
-# HRMS Backend & Frontend
+Got it! Here’s an updated **README.md** without the Cloudinary reference:
 
-This project is a **Human Resource Management System (HRMS)** that allows an admin and local users to manage and view videos of abnormal events (accidents, chain snatching, kidnapping, fighting) and monitor road‑safety matters.
+````markdown
+# Human Resource Management System (HRMS)
 
-## 📽 Demo Video  
-You can view a demo of the system here:  
-[Watch Demo Video](https://res.cloudinary.com/dq1rqwebs/video/upload/v1763985596/video_pjc4yb.mp4)
+A full-stack web application for managing employees, teams, and logs, with user authentication and role-based access. This project demonstrates a complete HR management system backend and frontend.
 
-## 🛠 Technologies Used  
-- Backend: Node.js, Express.js, Sequelize ORM, PostgreSQL  
-- Frontend: React.js (Create‑React‑App)  
-- Deployment:  
-  - Backend: Render (or serverless)  
-  - Frontend: Vercel  
-- Video Storage: Cloudinary  
-- Authentication: JSON Web Tokens (JWT), bcrypt (for password hashing)  
-- Object Detection: YOLOv8 (already processed the video uploads)
+---
 
-## 🎯 Features  
-- **Admin account**: Access to view all types of abnormal event videos (accidents, fighting, chain snatching, kidnapping)  
-- **Local user account**: Access only to view accident‑related videos  
-- User authentication with login  
-- Dashboard view: videos displayed in a structured way, with title (first word of video name), description, creation date/time  
-- Video uploading, processing (object detection), storing in Cloudinary  
-- Metadata and filtering by keywords (accident, chain, kidnapping, fighting)  
-- Responsive React UI, with routing and state management  
+## Features
 
-## 🔧 Setup & Deployment
+- User authentication (Admin and Local users)
+- Employee management
+- Team management
+- Role-based access control
+- Logging and tracking
+- Integration with PostgreSQL database
+- Backend API with Express.js
+- Frontend with React.js
 
-### Backend Setup  
-1. Clone the backend repository  
-   ```bash
-   git clone <backend‑repo‑url>
-   cd backend
+---
+
+## Demo
+
+Watch the demo of the HRMS application here:
+
+[![HRMS Demo](https://res.cloudinary.com/dq1rqwebs/video/upload/v1763985596/video_pjc4yb.mp4)](https://res.cloudinary.com/dq1rqwebs/video/upload/v1763985596/video_pjc4yb.mp4)
+
+You can click the video above to view the demo.
+
+---
+
+## Installation
+
+### Backend
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/yourusername/Human-Resource-Management-System-backend.git
 ````
 
-2. Create a `.env` file in the project root:
+2. Install dependencies:
 
-   ```env
-   PORT=5000
-   DB_HOST=your_postgres_host
-   DB_USER=your_db_user
-   DB_PASS=your_db_password
-   DB_NAME=your_db_name
-   DB_PORT=5432
-   JWT_SECRET=your_jwt_secret
-   ```
-3. Install dependencies:
-
-   ```bash
-   npm install
-   ```
-4. Run locally:
-
-   ```bash
-   npm run dev
-   ```
-5. For deployment (e.g., on Render), ensure your environment variables are set in the dashboard and you use `process.env.PORT` (Render assigns it automatically).
-
-### Frontend Setup
-
-1. Clone the frontend repository
-
-   ```bash
-   git clone <frontend‑repo‑url>
-   cd frontend
-   ```
-2. Create a `.env` file:
-
-   ```env
-   REACT_APP_API_URL=https://your‑backend‑url/api
-   ```
-
-   Note: On Vercel, set this under **Environment Variables** in the project settings.
-3. Install dependencies and build:
-
-   ```bash
-   npm install
-   npm run build
-   ```
-4. Deploy on Vercel:
-
-   * Link your Git repository
-   * Set build command to `npm run build`
-   * Set output directory to `build`
-   * Ensure `REACT_APP_API_URL` is set for Production
-
-## 🖥 Folder Structure (Example)
-
-```
-/backend
-  |- api/
-      index.js
-  |- db/
-      index.js
-  |- routes/
-      auth.js
-      employees.js
-      teams.js
-      logs.js
-  |- models/
-      user.js
-      team.js
-      log.js
-  |- .env
-  |- package.json
-
-/frontend
-  |- src/
-      components/
-      pages/
-      App.js
-      index.js
-  |- .env
-  |- package.json
+```bash
+cd backend
+npm install
 ```
 
-## ✅ Usage
+3. Configure environment variables (`.env`):
 
-* Register or log in as **admin** or **local user**
-* Upload videos (if you have upload functionality) or view existing videos
-* On the dashboard:
+```env
+PORT=5000
+DB_HOST=your-db-host
+DB_USER=your-db-user
+DB_PASS=your-db-password
+DB_NAME=your-db-name
+```
 
-  * Videos shown in columns with title, description, date/time
-  * Filter videos by keywords (accident, chain, kidnapping, fighting)
-* Admin sees all categories; local user sees only accidents.
+4. Run the server:
 
-## 🔍 Notes
+```bash
+npm start
+```
 
-* Make sure your `react-scripts` version and Node version are compatible for deployment on Vercel.
-* Use `cors({ origin: '<frontend‑url>' })` or `cors({ origin: '*' })` in Express so your frontend can access the API.
-* For video processing (YOLOv8, OpenCV) ensure cloud storage (e.g., Cloudinary) credentials are properly configured.
+---
 
-## 🧾 License
+### Frontend
 
-This project is released under the [MIT License](LICENSE).
+1. Clone the frontend repository:
 
-## 🤝 Contact
+```bash
+git clone https://github.com/yourusername/Human-Resource-Management-System-frontend.git
+```
 
-For questions or issues, please contact:
-Your Name – [your.email@example.com](mailto:your.email@example.com)
-Project repository: [GitHub Link]
+2. Install dependencies:
+
+```bash
+cd frontend
+npm install
+```
+
+3. Configure environment variables (`.env`):
+
+```env
+REACT_APP_API_URL=https://your-backend-url/api
+```
+
+4. Start the development server:
+
+```bash
+npm start
+```
+
+---
+
+## Technologies Used
+
+* **Frontend:** React.js, React Router, Axios
+* **Backend:** Node.js, Express.js
+* **Database:** PostgreSQL, Sequelize ORM
+* **Authentication:** JWT (JSON Web Tokens)
+* **Deployment:** Vercel (frontend), Render (backend)
+
+---
+
+## Sample Data
+
+### Teams
+
+| Name        | Description                                                  |
+| ----------- | ------------------------------------------------------------ |
+| Development | Handles all software development and feature implementation. |
+| Design      | Responsible for UI/UX and product design.                    |
+| QA          | Quality assurance and testing of all software releases.      |
+| HR          | Manages recruitment, employee relations, and benefits.       |
+| Marketing   | Handles advertising, social media, and brand promotion.      |
+
+---
+
+## API Endpoints
+
+* `POST /api/auth/login` — User login
+* `GET /api/employees` — List employees
+* `POST /api/employees` — Add new employee
+* `GET /api/teams` — List teams
+* `POST /api/teams` — Create a team
+* `GET /api/logs` — Get logs
+
+---
+
+## License
+
+This project is licensed under the MIT License.
 
 ```
 
 ---
 
-You can copy the above into your `README.md` and update the placeholder URLs, repository links, your contact information, and any additional features you've implemented.  
-If you’d like, I can generate a version with **badges**, **screenshots**, or more detailed deployment instructions.
-::contentReference[oaicite:0]{index=0}
+If you want, I can also **add screenshots of the app and demo video thumbnail** so your README looks more professional on GitHub.  
+
+Do you want me to do that?
 ```
