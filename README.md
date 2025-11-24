@@ -1,6 +1,4 @@
-Got it! Here’s an updated **README.md** without the Cloudinary reference:
 
-````markdown
 # Human Resource Management System (HRMS)
 
 A full-stack web application for managing employees, teams, and logs, with user authentication and role-based access. This project demonstrates a complete HR management system backend and frontend.
@@ -38,7 +36,6 @@ You can click the video above to view the demo.
 
 ```bash
 git clone https://github.com/yourusername/Human-Resource-Management-System-backend.git
-````
 
 2. Install dependencies:
 
