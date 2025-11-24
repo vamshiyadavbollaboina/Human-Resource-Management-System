@@ -1,6 +1,3 @@
-
-
-````markdown
 # HRMS Backend & Frontend
 
 This project is a **Human Resource Management System (HRMS)** that allows an admin and local users to manage and view videos of abnormal events (accidents, chain snatching, kidnapping, fighting) and monitor road‑safety matters.
