@@ -22,7 +22,7 @@ A full-stack web application for managing employees, teams, and logs, with user 
 
 Watch the demo of the HRMS application here:
 
-[![HRMS Demo](https://res.cloudinary.com/dq1rqwebs/video/upload/v1763985596/video_pjc4yb.mp4)](https://res.cloudinary.com/dq1rqwebs/video/upload/v1763985596/video_pjc4yb.mp4)
+[![HRMS Demo](https://res.cloudinary.com/dq1rqwebs/video/upload/v1763985596/video_pjc4yb.mp4)
 
 You can click the video above to view the demo.
 
